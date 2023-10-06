@@ -313,7 +313,7 @@ onMounted(()=>{
         <h1 class="titulo">Por Fuente, Generica y Clasificador</h1>
         <div class="col-md-6">
           <label for="fuente" class="col-form-label"><h4>Fuente</h4></label>
-          <select @change="get_generica_meta_fuente()" v-model="cod_fte" id="fuente" class="form-select form-select-md mb-3">
+          <select @change="get_generica_meta_fuente(), get_especifica_meta_fuente_generica()" v-model="cod_fte" id="fuente" class="form-select form-select-md mb-3">
             <option value="" disabled selected>Seleccione una fuente</option>
             <option v-for="fte in fuente" :value="fte.cod_fuente">
             {{ fte.fuente }}
